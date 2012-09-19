@@ -1,5 +1,5 @@
 @echo off
-
+SETLOCAL
 :: Specify project file
 IF "%PROJECT%" == "" (
    SET PROJECT=MvcAppCustomDeploy\MvcAppCustomDeploy.csproj
@@ -35,7 +35,6 @@ if ERRORLEVEL 1 exit /b 1
 :: Copy the artifacts to the target
 echo Copying files to from '%DEPLOYMENT_TEMP%' to '%DEPLOYMENT_TARGET%'
 xcopy "%DEPLOYMENT_TEMP%" "%DEPLOYMENT_TARGET%" /Y /Q /E /I
-
 exit /b 0
 
 :MissingProject
