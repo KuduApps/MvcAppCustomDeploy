@@ -38,5 +38,5 @@ xcopy "%DEPLOYMENT_TEMP%" "%DEPLOYMENT_TARGET%" /Y /Q /E /I
 exit /b 0
 
 :MissingProject
-echo The target project (PROJECT) was not specifed
+echo The target project (PROJECT) was not specifed again
 exit /b 1
